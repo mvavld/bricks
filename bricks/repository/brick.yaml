@@ -1,0 +1,14 @@
+name: repository
+description: Создает репозиторий с одним методом
+
+version: 0.1.0+1
+
+vars:
+  name:
+    type: string
+    description: Создает репозиторий с одним методом
+    prompt: Введите название репозитория (например "auth", "order")
+  method:
+    type: string
+    description: Название метода
+    prompt: Введите название метода

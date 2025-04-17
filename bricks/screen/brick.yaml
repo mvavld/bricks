@@ -7,6 +7,5 @@ vars:
   name:
     type: string
     description: Создает экран, BLoC, и ивент для роутера.
-    default: например "profile settings", "cart", "home"
-    prompt: Введите название экрана
+    prompt: Введите название экрана (например "profile settings", "cart", "home")
 
