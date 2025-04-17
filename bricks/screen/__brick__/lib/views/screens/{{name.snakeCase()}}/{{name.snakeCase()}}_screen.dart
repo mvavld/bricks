@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'bloc/{{name.pascalCase()}}.dart';
+import 'bloc/{{name.snakeCase()}}.dart';
 
 
 class {{name.pascalCase()}}Screen extends StatelessWidget {
 
-  static const String id = "{{name.snakeCase()}}";
+  static const String id = "{{name.snakeCase()}}/";
 
   const {{name.pascalCase()}}Screen({super.key});
-
 
   @override
   Widget build(BuildContext context) {
