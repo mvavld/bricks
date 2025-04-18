@@ -1,0 +1,10 @@
+name: dto
+description: Создает пару Dto - entity.
+
+version: 0.1.0+1
+
+vars:
+  name:
+    type: string
+    description: Создает Dto, entity.
+    prompt: Введите название класса (например "address", "product")
