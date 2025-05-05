@@ -29,13 +29,30 @@ mason make dto --on-conflict append
    dart pub global activate mason_cli
    ```
 
-2. **Клонирование шаблонов**
-   ```bash
-   git clone [repository-url]
-   cd mason-bricks
+2. **Создание mason.yaml**
+   Создайте файл `mason.yaml` в корне вашего проекта со следующим содержимым:
+   ```yaml
+   bricks:
+     screen:
+       git:
+         url: {{repository-url}}
+         path: bricks/screen
+     repository:
+       git:
+         url: {{repository-url}}
+         path: bricks/repository
+     dto:
+       git:
+         url: {{repository-url}}
+         path: bricks/dto
    ```
 
-3. **Использование шаблонов**
+3. **Установка шаблонов**
+   ```bash
+   mason get
+   ```
+
+4. **Использование шаблонов**
    - Следуйте инструкциям в README.md каждого шаблона
 
 ## 📝 Пример Использования
