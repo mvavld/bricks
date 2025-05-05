@@ -79,26 +79,7 @@ lib/
            │
            └── user_repository.dart
    ```
-
-3. **Пример использования в BLoC**
-   ```dart
-   // user_bloc.dart
-   class UserBloc extends Bloc<UserEvent, UserState> {
-     final UserRepository _userRepository;
-
-     UserBloc(this._userRepository) : super(UserInitial()) {
-       on<UserLoadEvent>((event, emit) async {
-         try {
-           final user = await _userRepository.getUser(event.userId);
-           emit(UserLoaded(user));
-         } catch (e) {
-           emit(UserError(e.toString()));
-         }
-       });
-     }
-   }
-   ```
-
+   
 ### Лучшие Практики
 
 1. **Организация кода**
@@ -110,8 +91,3 @@ lib/
    - Используйте DTO для преобразования данных
    - Добавляйте валидацию данных
    - Обрабатывайте ошибки на уровне репозитория
-
-3. **Тестирование**
-   - Пишите тесты для репозиториев
-   - Используйте mock для источников данных
-   - Тестируйте преобразование данных
